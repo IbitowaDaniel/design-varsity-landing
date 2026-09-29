@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* === BRAND COLORS === */
+  --color-white: #FFFFFF;
+  --color-amber-50: #FFFBEB;
+  --color-amber-100: #FEF3C7;
+  --color-amber-200: #FDE68A;
+  --color-amber-300: #FCD34D;
+  --color-amber-400: #FBBF24;
+  --color-amber-700: #B45309;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* === FONTS === */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+
+  /* === SHADOWS === 
+     Usage in JSX: shadow-section-desktop or shadow-section-mobile */
+  --shadow-section-desktop: 0px 32px 0px rgba(253, 230, 138, 1);
+  --shadow-section-mobile: 0px 24px 0px rgba(253, 230, 138, 1);
+
+  /* === BORDER RADIUS === */
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
+
+/* --- Heading > Hero (Sora, SemiBold, -2% letter spacing) --- */
+.text-hero {
+  font-family: var(--font-sora);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-hero {
+    font-size: 44px;
+    line-height: 52px;
+  }
+}
+
+/* --- Heading > Section (Sora, SemiBold, -2% letter spacing) --- */
+.text-section {
+  font-family: var(--font-sora);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@media (min-width: 768px) {
+  .text-section {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+
+
+/* --- Heading > Card (Sora, SemiBold, -2% letter spacing) --- */
+.text-card {
+  font-family: var(--font-sora);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+/* --- Body (Inter, Medium, -2% letter spacing) --- */
+.text-body {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+/* --- Body Large (Inter, Medium, -2% letter spacing) --- */
+
+.text-bodyLarge {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .text-bodyLarge {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+
+.text-eyebrowHero {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+@media (min-width: 1280px) {
+  .text-eyebrowHero {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+.text-popularBadge {
+  font-family: var(--font-sora);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 14px;
+  line-height: 20px;
 }
