@@ -76,9 +76,7 @@ export default function WallOfFame() {
       eyebrow="Wall Of Fame"
       title={
         <>
-          Proof that great things
-          <br />
-          are happening
+          Proof that great things are happening
         </>
       }
     >

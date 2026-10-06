@@ -109,9 +109,9 @@ export default function WhyChooseUs() {
       eyebrow="Why Choose Us"
       title={
         <>
-          What makes us different
-          <br />
-          from others?
+          What makes us better
+          
+          than others?
         </>
       }
     >

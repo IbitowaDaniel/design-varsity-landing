@@ -41,7 +41,7 @@ export default function Section({
             <Eyebrow label={eyebrow} />
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="text-section text-gray-900">{title}</h2>
+            <h2 className="text-section text-gray-900 max-w-[380px]">{title}</h2>
           </Reveal>
         </div>
 

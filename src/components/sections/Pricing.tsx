@@ -131,7 +131,7 @@ export default function Pricing() {
       title={
         <>
           Start for free, pay only
-          <br />
+          
           when you see value
         </>
       }

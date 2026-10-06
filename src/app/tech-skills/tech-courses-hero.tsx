@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="mx-auto w-full max-w-[1200px] overflow-x-clip bg-white rounded-b-[32px] md:rounded-b-[56px] lg:rounded-b-[64] px-4 pb-0 pt-24 shadow-section-mobile md:px-0 md:pt-28 md:shadow-section-desktop xl:pt-[154px]"
+      className="mx-auto w-full max-w-[1200px] overflow-x-clip bg-white rounded-b-[32px] md:rounded-b-[56px] lg:rounded-b-[64] px-4 pb-0 pt-28 shadow-section-mobile md:px-0 md:shadow-section-desktop xl:pt-[154px]"
     >
 
       {/* ── Hero content container ── */}
@@ -51,7 +51,7 @@ export function Hero() {
               className="text-bodyLarge w-full max-w-[580px] text-center text-gray-500"
               {...fadeUp(0.16)}
             >
-              No tech background needed. Learn through interactive lessons, hands-on practice, 
+              No tech background needed. Learn through interactive lessons, hands-on practice,
               and guided learning, then get the know-how to turn your skill
               into a career, freelance income, or a business.
             </motion.p>
@@ -64,14 +64,14 @@ export function Hero() {
           >
             {/* Mobile: fill variants */}
             <Button variant="primaryFill" href="https://www.wikihow.com" className="md:hidden">
-              Take a Quiz
+              Join Community
             </Button>
             <Button variant="secondaryFill" href="#skills" className="md:hidden">
               View Skills
             </Button>
             {/* Tablet / desktop: hug variants */}
             <Button variant="primary" href="https://www.wikihow.com" className="hidden md:inline-flex">
-              Take a Quiz
+              Join Community
             </Button>
             <Button variant="secondary" href="#skills" className="hidden md:inline-flex">
               View Skills
@@ -95,6 +95,7 @@ export function Hero() {
             desktop={HERO_VISUALS.desktop}
             alt="Happy designer holding a laptop, surrounded by the Design Varsity Africa course interface"
             className="w-[420px] md:w-[768px] xl:w-[980px]"
+            priority={true}
           />
         </motion.div>
       </div>

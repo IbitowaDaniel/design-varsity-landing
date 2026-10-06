@@ -121,7 +121,7 @@ const OUTCOMES: Record<TabKey, OutcomeItem[]> = {
       desktopImage: IMAGE_SLOTS[3],
     },
     {
-      heading: "Responsive Design",
+      heading: "Responsive design",
       subtext:
         "Design sites that adapt across mobile, tablet, and desktop, so you can deliver one experience that works beautifully on any device your users use.",
 
@@ -148,7 +148,7 @@ const OUTCOMES: Record<TabKey, OutcomeItem[]> = {
       desktopImage: IMAGE_SLOTS[7],
     },
     {
-      heading: "Hooking Users",
+      heading: "Hooking users",
       subtext:
         "Craft first-time experiences that guide new users to their \"aha moment\" fast, so people stick around instead of deleting your app on day one.",
       desktopImage: IMAGE_SLOTS[8],
@@ -156,19 +156,19 @@ const OUTCOMES: Record<TabKey, OutcomeItem[]> = {
   ],
   dashboard: [
     {
-      heading: "Making Data Actionable",
+      heading: "Making data actionable",
       subtext:
         "Learn to design dashboards that help users spot what matters in seconds, so people make confident decisions instead of drowning in information.",
       desktopImage: IMAGE_SLOTS[9],
     },
     {
-      heading: "Role-Based Design",
+      heading: "Role-based design",
       subtext:
         "Structure permissions and views so admins, managers, and everyday users each see exactly what they need, nothing more, nothing less.",
       desktopImage: IMAGE_SLOTS[10],
     },
     {
-      heading: "Clear Information Hierarchy",
+      heading: "Clear information hierarchy",
       subtext:
         "Organize raw data into tables, filters, and reports so people find what they need fast, without digging through cluttered, overwhelming screens.",
       desktopImage: IMAGE_SLOTS[11],
@@ -223,7 +223,7 @@ export default function LearningOutcomes() {
       title={
         <>
           These are the things
-          <br />
+           
           you will master
         </>
       }

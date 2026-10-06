@@ -7,7 +7,7 @@ export default function SectionLayout() {
       title={
         <>
           This is basically what the
-          <br />
+           
           heading will look like
         </>
       }

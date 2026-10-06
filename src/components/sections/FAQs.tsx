@@ -49,7 +49,7 @@ export default function FAQs() {
       title={
         <>
           Do you have questions?
-          <br />
+           
           We have answers
         </>
       }

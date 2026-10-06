@@ -69,7 +69,7 @@ export default function Benefits() {
       title={
         <>
           Here is what we bring
-          <br />
+           
           to the table
         </>
       }

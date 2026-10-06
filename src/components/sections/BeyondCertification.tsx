@@ -66,7 +66,7 @@ export default function BeyondCertification() {
       title={
         <>
           What you get beyond
-          <br />
+           
           being certified
         </>
       }
@@ -74,7 +74,7 @@ export default function BeyondCertification() {
       {/* Box container 1 */}
       <div className="flex flex-col gap-3 md:flex-row md:gap-4">
         <BeyondCertificationCard
-          heading="Get Job-Ready"
+          heading="Get job ready"
           subtext="Learn how to create stronger applications, position your skills, and stand out to employers and clients on freelance platforms like LinkedIn, Upwork, Contra, and more."
           desktopImage="/assets/beyond-certification/desktop/desktop-beyond-certification-card-image-1.svg"
           tabletMobileImage="/assets/beyond-certification/tablet-mobile/tablet-mobile-beyond-certification-card-image-1.svg"
@@ -83,7 +83,7 @@ export default function BeyondCertification() {
           className="md:flex-1 xl:flex-none xl:w-[600px]"
         />
         <BeyondCertificationCard
-          heading="Access Real Opportunities"
+          heading="Access real opportunities"
           subtext="We connect with organizations looking for talents and share roles with our graduates, giving you access to internship and job offers beyond your own search."
           desktopImage="/assets/beyond-certification/desktop/desktop-beyond-certification-card-image-2.svg"
           tabletMobileImage="/assets/beyond-certification/tablet-mobile/tablet-mobile-beyond-certification-card-image-2.svg"

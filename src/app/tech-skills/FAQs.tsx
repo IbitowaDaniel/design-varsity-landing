@@ -16,10 +16,6 @@ const myPageFaqs: FaqItem[] = [
     text: "No. Every skill path is beginner friendly, and the interactive lessons are structured to take you from zero experience to a confident, practical skill set.",
   },
   {
-    heading: "How do I know which tech skill is best for me?",
-    text: "If you're not sure where to start, take our skill pathfinder quiz. It matches your interests, strengths and ability with the tech path you're most likely to enjoy and succeed in.",
-  },
-  {
     heading: "Do you only teach the skill, or also how to make money from it?",
     text: "Both. Every path is built around helping you become profitable with what you learn, not just skilled at it. Each path comes with tutorials on freelancing, client acquisition, pricing your work, landing a job, and so on.",
   },
@@ -51,7 +47,7 @@ export default function FAQs() {
       }
       contentClassName="!bg-white"
     >
-      <FaqAccordionList faqData={myPageFaqs} />;
+      <FaqAccordionList faqData={myPageFaqs} />
     </Section>
   );
 }

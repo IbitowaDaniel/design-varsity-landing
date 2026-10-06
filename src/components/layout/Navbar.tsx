@@ -84,7 +84,7 @@ export function Navbar() {
       {/* DESKTOP */}
       <div
         className={`
-          mx-auto hidden xl:flex items-center justify-between
+          mx-auto hidden xl:grid grid-cols-[1fr_auto_1fr] items-center
           transition-all duration-500 ease-in-out
           ${scrolled
             ? "max-w-[1120px] mt-4 rounded-xl border-2 border-gray-200 bg-white px-6 pt-3 pb-4"
@@ -92,7 +92,7 @@ export function Navbar() {
           }
         `}
       >
-        <a href="/" className="h-[32px] w-[60px]">
+        <a href="/" className="h-[32px] w-[60px] justify-self-start">
           <img
             src="/assets/icons/logo.svg"
             alt="Design Varsity Africa"
@@ -100,7 +100,7 @@ export function Navbar() {
           />
         </a>
 
-        <div className="flex items-center gap-9">
+        <div className="flex items-center gap-9 -translate-x-10">
           {navLinks.map((link) => {
             const finalHref = isHome ? link.href : `/${link.href}`;
             const isActive = activeHref === link.href;
@@ -118,7 +118,15 @@ export function Navbar() {
           })}
         </div>
 
-        <Button href="https://www.wikihow.com">Start For Free</Button>
+        <div className="flex items-center gap-6 justify-self-end">
+          <a
+            href="https://www.wikihow.com"
+            className="text-body text-gray-500 transition-colors hover:text-amber-700"
+          >
+            Login
+          </a>
+          <Button href="https://www.wikihow.com">Start For Free</Button>
+        </div>
       </div>
 
       {/* MOBILE — header row */}
@@ -195,8 +203,8 @@ export function Navbar() {
             })}
             <div
               className={`
-                pt-2 flex items-center justify-center
-                transition-all duration-500
+                pt-2 flex flex-col items-center justify-center
+                transition-all duration-500 gap-4
                 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}
               `}
               style={{
@@ -206,6 +214,13 @@ export function Navbar() {
               <Button variant="primaryFill" href="https://www.wikihow.com" className="max-w-96">
                 Start For Free
               </Button>
+              <a
+                href="https://www.wikihow.com"
+                onClick={() => setIsOpen(false)}
+                className="text-body py-2 text-gray-500 transition-colors hover:text-amber-700"
+              >
+                Login
+              </a>
             </div>
           </div>
         </div>

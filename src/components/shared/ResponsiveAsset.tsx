@@ -28,10 +28,11 @@ export function ResponsiveAsset({
         src={mobile}
         alt={alt}
         width={980}
-        height={735} // use real aspect ratio of your desktop SVG
+        height={735}
         priority={priority}
         loading={priority ? undefined : "lazy"}
-        className={cn("h-auto w-full", imgClassName)}
+        style={{ height: "auto" }} // <--- Add this inline style to clear the aspect ratio warning
+        className={cn("w-full", imgClassName)} // Removed h-auto from className since we put it in style
       />
     </picture>
   );
