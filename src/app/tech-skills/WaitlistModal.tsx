@@ -7,10 +7,21 @@ import { Button } from "@/components/ui/Button";
 type Status = "idle" | "submitting" | "success";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const ICON_SRC = "/assets/tech-skills/the-advantage/waitlist-icon.svg";
 
 // Replace with your real API call (e.g. fetch("/api/waitlist", { method: "POST", ... }))
 async function joinWaitlist(email: string): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 1500));
+}
+
+// Resolves once the image is loaded (or fails), so it never blocks the success state
+function loadImage(src: string): Promise<void> {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = () => resolve();
+    img.src = src;
+  });
 }
 
 interface WaitlistModalProps {
@@ -25,16 +36,18 @@ export function WaitlistModal({ open, onClose }: WaitlistModalProps) {
   const [error, setError] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
-  // Reset state each time the modal opens + focus the input
+  // Preload the success icon as soon as the component mounts (page load)
+  useEffect(() => {
+    const img = new Image();
+    img.src = ICON_SRC;
+  }, []);
+
+  // Reset state each time the modal opens
   useEffect(() => {
     if (open) {
       setEmail("");
       setError("");
       setStatus("idle");
-
-      // Preload success icon so it's cached before the success state shows
-      const img = new Image();
-      img.src = "/assets/tech-skills/the-advantage/waitlist-icon.svg";
     }
   }, [open]);
 
@@ -67,7 +80,8 @@ export function WaitlistModal({ open, onClose }: WaitlistModalProps) {
     setError("");
     setStatus("submitting");
     try {
-      await joinWaitlist(value);
+      // Run in parallel: no extra delay unless the image is slower than the API call
+      await Promise.all([joinWaitlist(value), loadImage(ICON_SRC)]);
       setStatus("success");
     } catch {
       setStatus("idle");
@@ -114,7 +128,7 @@ export function WaitlistModal({ open, onClose }: WaitlistModalProps) {
             {status === "success" ? (
               <div className="flex flex-col items-center gap-6 text-center" role="status" aria-live="polite">
                 <img
-                  src="/assets/tech-skills/the-advantage/waitlist-icon.svg"
+                  src={ICON_SRC}
                   alt=""
                   width={60}
                   height={60}
