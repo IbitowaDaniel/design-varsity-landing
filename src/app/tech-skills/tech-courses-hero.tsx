@@ -94,7 +94,7 @@ export function Hero() {
             tablet={HERO_VISUALS.tablet}
             desktop={HERO_VISUALS.desktop}
             alt="Happy designer holding a laptop, surrounded by the Design Varsity Africa course interface"
-            className="w-[420px] md:w-[768px] xl:w-[980px]"
+            className="h-auto w-[420px] md:w-[768px] xl:w-[980px]"
             priority={true}
           />
         </motion.div>
