@@ -178,9 +178,9 @@ export function WaitlistModal({ open, onClose }: WaitlistModalProps) {
                     }}
                     aria-invalid={!!error}
                     aria-describedby={error ? "waitlist-error" : undefined}
-                    className={`h-[50px] w-full rounded-[10px] border px-4 text-body text-gray-900 outline-none transition placeholder:text-gray-400 focus:ring-4 disabled:bg-gray-50 ${error
+                    className={`h-[50px] w-full rounded-[10px] border-dashed border-2 px-4 text-body text-gray-900 outline-none transition placeholder:text-gray-400 focus:ring-6 disabled:bg-gray-50 ${error
                       ? "border-red-500 focus:ring-red-200"
-                      : "border-gray-500 focus:border-gray-500 focus:ring-gray-200"
+                      : "border-gray-400 focus:ring-gray-200"
                       }`}
                   />
                   {error && (

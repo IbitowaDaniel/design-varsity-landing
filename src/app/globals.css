@@ -4,6 +4,7 @@ html {
   scrollbar-gutter: stable;
 }
 
+
 @theme inline {
   /* === BRAND COLORS === */
   --color-white: #FFFFFF;
