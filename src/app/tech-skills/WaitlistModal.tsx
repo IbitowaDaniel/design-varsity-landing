@@ -31,8 +31,10 @@ export function WaitlistModal({ open, onClose }: WaitlistModalProps) {
       setEmail("");
       setError("");
       setStatus("idle");
-      const t = setTimeout(() => inputRef.current?.focus(), 50);
-      return () => clearTimeout(t);
+
+      // Preload success icon so it's cached before the success state shows
+      const img = new Image();
+      img.src = "/assets/tech-skills/the-advantage/waitlist-icon.svg";
     }
   }, [open]);
 
